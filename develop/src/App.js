@@ -4,7 +4,11 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import IconButton from '@material-ui/core/IconButton';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles({
   root: {
@@ -126,6 +130,25 @@ function App() {
               </div>
             </CardContent>
           </Card>
+          <Typography className={classes.title}>История расходов</Typography>
+          <ListItem className={classes.revenuelist} button>
+              <ListItemText className={classes.revenuereason} primary='Получил зарплату'></ListItemText>
+              <ListItemText className={classes.revenuenumber} edge='end' primary='+30000 ₽'></ListItemText>
+              <ListItemSecondaryAction className={classes.deleteicon}>
+                    <IconButton edge="end" aria-label="delete">
+                    <DeleteIcon />
+                    </IconButton>
+              </ListItemSecondaryAction>
+          </ListItem>
+          <ListItem className={classes.expenseslist} button>
+              <ListItemText className={classes.expensesreason} primary='Отдал долг'></ListItemText>
+              <ListItemText className={classes.expensesnumber} edge='end' primary='-10000 ₽'></ListItemText>
+              <ListItemSecondaryAction className={classes.deleteicon}>
+                    <IconButton edge="end" aria-label="delete">
+                    <DeleteIcon />
+                    </IconButton>
+              </ListItemSecondaryAction>
+          </ListItem>
           </Container>
     </div>
   );
