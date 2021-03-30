@@ -149,6 +149,12 @@ function App() {
                     </IconButton>
               </ListItemSecondaryAction>
           </ListItem>
+          <Card>
+            <CardContent>
+            <Typography className={classes.title}>Новая операция</Typography>
+            </CardContent>
+          </Card>
+
           </Container>
     </div>
   );
