@@ -1,24 +1,17 @@
-let dbOperation = [
-    {
-      id: '1',
-      description: 'Получил зарплату',
-      amount: 30000,
-    },
-    {
-      id: '2',
-      description: 'Отдал долг',
-      amount: -10000,
-    },
-    {
-      id: '3',
-      description: 'Сходил за продуктами',
-      amount: -5000,
-    },
-  ]
-  
-  const RenderOperation = () => {
-    const HistoryListItem = document.createElement('div');
-    console.log(HistoryListItem);
-}
+import './App.js';
 
+const historyblock = document.querySelector('HistoryButtonPlus');
+
+const RenderOperation = () => {
+
+  const HistoryListItem = document.createElement('li');
+
+  HistoryListItem.classList.add('HistoryButtonPlus');
+
+  HistoryListItem.innerHTML = `
+  <span>21212121</span>
+  `;
+  historyblock.append(HistoryListItem);
+  
+}
 export default RenderOperation;
