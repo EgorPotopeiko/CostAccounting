@@ -114,8 +114,14 @@ const useStyles = makeStyles({
     fontSize: 30,
     paddingBottom: 20,
   },
+  nameinput: {
+    backgroundColor: 'white',
+    borderRadius: 20,
+  },
   moneyinput: {
     marginTop: 20,
+    borderRadius: 20,
+    backgroundColor: 'white',
   },
   addBtn: {
     marginTop: 20,
@@ -125,6 +131,10 @@ const useStyles = makeStyles({
     '&:hover': {
       backgroundColor: '#FF4500',
     },
+  },
+  CardAdd: {
+    backgroundColor: '#ddd',
+    borderRadius: 20,
   },
 });
 
@@ -171,11 +181,11 @@ function App() {
                     </IconButton>
               </ListItemSecondaryAction>
           </ListItem>
-          <Card>
+          <Card className={classes.CardAdd}>
             <CardContent>
             <Typography className={classes.inputtitle}>Новая операция</Typography>
             <div className={classes.inputfields}>
-            <TextField id="outlined-basic" label="Наименование операции" variant="outlined" />
+            <TextField className={classes.nameinput} id="outlined-basic" label="Наименование операции" variant="outlined" />
             <TextField className={classes.moneyinput}
               id="outlined-adornment-amount"
               variant="outlined"
