@@ -12,6 +12,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Button from '@material-ui/core/Button';
+import RenderOperation from './AddHistoryElement';
 
 const useStyles = makeStyles({
   root: {
@@ -199,8 +200,8 @@ function App() {
               Disable elevation
             </Button>
             </CardContent>
+           
           </Card>
-
           </Container>
     </div>
   );
