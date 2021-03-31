@@ -9,6 +9,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import DeleteIcon from '@material-ui/icons/Delete';
+import TextField from '@material-ui/core/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles({
   root: {
@@ -19,7 +22,7 @@ const useStyles = makeStyles({
     paddingTop: 20,
   },
   cards: {
-    marginTop: 40,
+    marginTop: 20,
     backgroundColor: '#fff',
     border: '1px solid #ccc',
     borderRadius: 25,
@@ -104,6 +107,22 @@ const useStyles = makeStyles({
     maxWidth: 70,
     paddingRight: 30,
   },
+  inputfields: {
+    display: 'grid',
+  },
+  inputtitle: {
+    fontSize: 30,
+    paddingBottom: 20,
+  },
+  moneyinput: {
+    marginTop: 20,
+  },
+  addBtn: {
+    marginTop: 20,
+    backgroundColor: 'orange',
+    color: 'white',
+    borderRadius: 10,
+  },
 });
 
 function App() {
@@ -151,7 +170,21 @@ function App() {
           </ListItem>
           <Card>
             <CardContent>
-            <Typography className={classes.title}>Новая операция</Typography>
+            <Typography className={classes.inputtitle}>Новая операция</Typography>
+            <div className={classes.inputfields}>
+            <TextField id="outlined-basic" label="Наименование операции" variant="outlined" />
+            <TextField className={classes.moneyinput}
+              id="outlined-adornment-amount"
+              variant="outlined"
+              label="Amount"
+              InputProps={{
+                startAdornment: <InputAdornment position="start">$</InputAdornment>,
+              }}
+            />
+            </div>
+            <Button className={classes.addBtn} variant="contained" disableElevation>
+              Disable elevation
+            </Button>
             </CardContent>
           </Card>
 
