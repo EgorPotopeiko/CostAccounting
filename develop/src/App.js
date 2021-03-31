@@ -119,9 +119,12 @@ const useStyles = makeStyles({
   },
   addBtn: {
     marginTop: 20,
-    backgroundColor: 'orange',
+    backgroundColor: '#FF8C00',
     color: 'white',
     borderRadius: 10,
+    '&:hover': {
+      backgroundColor: '#FF4500',
+    },
   },
 });
 
