@@ -21,10 +21,12 @@ function App() {
     <div className="App">
       <Typography className={classes.title}>Калькулятор расходов</Typography>
         <Container maxWidth="sm">
-          <Typography className={classes.title}>История расходов</Typography>
           <InfoMenu />
+          <Typography className={classes.title}>История расходов</Typography>
+          <ul className="ButtonsList">
           <HistoryButtonPlus />
           <HistoryButtonMinus />
+          </ul>
           <CardMenu />
           </Container>
     </div>

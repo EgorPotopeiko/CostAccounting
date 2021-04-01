@@ -1,17 +1,12 @@
 import './App.js';
-
-const historyblock = document.querySelector('HistoryButtonPlus');
+import HistoryButtonPlus from './HistoryButtons/HistoryButtonPlus.js';
 
 const RenderOperation = () => {
-
+  const historyblock = document.querySelector('.ButtonsList');
   const HistoryListItem = document.createElement('li');
-
-  HistoryListItem.classList.add('HistoryButtonPlus');
-
-  HistoryListItem.innerHTML = `
-  <span>21212121</span>
-  `;
+  const content = HistoryButtonPlus.innerHTML;
+  HistoryListItem.innerHTML = content;
   historyblock.append(HistoryListItem);
-  
 }
+
 export default RenderOperation;

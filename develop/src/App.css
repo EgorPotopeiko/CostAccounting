@@ -32,3 +32,7 @@
   position: relative;
   list-style: none;
 }
+.ButtonsList{
+  text-decoration: none;
+  padding-left: 0;
+}
