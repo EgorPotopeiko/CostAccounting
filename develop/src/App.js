@@ -6,7 +6,8 @@ import InfoMenu from './InfoMenu';
 import HistoryButtonPlus from './HistoryButtons/HistoryButtonPlus';
 import HistoryButtonMinus from './HistoryButtons/HistoryButtonMinus';
 import CardMenu from './Card';
-import RenderOperation from './AddHistoryElement';
+import HistoryButton from './AddHistoryElement';
+import Generateblock from './init';
 
 const useStyles = makeStyles({
   title: {
@@ -26,6 +27,7 @@ function App() {
           <ul className="ButtonsList">
           <HistoryButtonPlus />
           <HistoryButtonMinus />
+          <Generateblock />
           </ul>
           <CardMenu />
           </Container>
