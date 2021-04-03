@@ -3,11 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import InfoMenu from './InfoMenu';
-import HistoryButtonPlus from './HistoryButtons/HistoryButtonPlus';
-import HistoryButtonMinus from './HistoryButtons/HistoryButtonMinus';
 import CardMenu from './Card';
 import HistoryButton from './AddHistoryElement';
-import Generateblock from './init';
+import React, {useState} from "react";
 
 const useStyles = makeStyles({
   title: {
@@ -16,20 +14,20 @@ const useStyles = makeStyles({
   },
 });
 
+
 function App() {
   const classes = useStyles();
+  const [data, setData] = useState([]);
   return (
     <div className="App">
       <Typography className={classes.title}>Калькулятор расходов</Typography>
         <Container maxWidth="sm">
-          <InfoMenu />
+          <InfoMenu data={data} />
           <Typography className={classes.title}>История расходов</Typography>
           <ul className="ButtonsList">
-          <HistoryButtonPlus />
-          <HistoryButtonMinus />
-          <Generateblock />
+          <HistoryButton data={data} setData={setData}/>
           </ul>
-          <CardMenu />
+          <CardMenu data={data} setData={setData}/>
           </Container>
     </div>
   );

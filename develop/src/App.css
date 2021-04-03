@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+
 .MuiListItem-container {
   position: relative;
   list-style: none;
