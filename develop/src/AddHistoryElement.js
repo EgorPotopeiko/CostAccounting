@@ -70,10 +70,7 @@ const useStyles = makeStyles({
 const HistoryButton = ({data, setData}) => {
 
   const deleteItem = (id) => {
-    // const newData = data.filter((item, i) => (i !== id));
-
     let newData = [];
-
     data.forEach((el, i) => {
       if(i !== id) {
         newData.push(el);
