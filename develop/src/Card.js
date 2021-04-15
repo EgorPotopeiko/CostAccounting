@@ -41,11 +41,6 @@ const useStyles = makeStyles({
     },
   });
 
-
-
-
-
-
   const CardMenu = ({data, setData}) => {
     const [description, setDescription] = useState('');
     const [amount, setAmount] = useState(0);
